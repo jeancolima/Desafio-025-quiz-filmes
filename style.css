@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    /* Colors */
+    --primary-color: #29bf12;
+    --secondary-color: #f21b3f;
+    --background-color: #4a4e69;
+    --white: #FFF;
+    --black: #000;
+    --light-gray: #8f8f8f;
+    --dark-gray: #383838;
+    --dark-purple: #250656;
+    /* Fonts */
+    --primary-font: "Raleway", sans-serif;
+    --secondary-font: "Josefin Sans", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--white);
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.progress-container {
+    width: 300px;
+    height: 5px;
+    background-color: var(--dark-purple);
+    border-radius: 8px;
+    position: relative;
+}
+
+.progress-bar {
+    width: 33%;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .8s ease-in-out;
+}
+
+.card-list {
+    width: 300px;
+    height: 700px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 268px;
+    padding: 2rem 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    border-radius: 16px;
+    transition: .5s;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 268px;
+    padding: 2rem 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    border-radius: 16px;
+    transition: 1s;
+    z-index: -3;
+}
+
+.correct-answers {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-size: 700;
+}
+
+.wrong-answers {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-size: 700;
+}
+
+.question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 7px;
+}
+
+.alternatives-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.alternatives-list li {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: .5rem 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.alternatives-list li:hover {
+    background-color: var(--dark-purple);
+    color: var(--white);
+}
+
+.btn-next-question {
+    width: 200px;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 34px;
+    cursor: pointer;
+    pointer-events: none;
+}
